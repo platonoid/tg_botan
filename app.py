@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 
-def brawlstars():
+def valorant():
     return 'Привет'
 
 
@@ -21,6 +21,6 @@ def receive_update():
     if request.method == "POST":
         print(request.json)
         chat_id = request.json["message"]["chat"]["id"]
-        weather = brawlstars()
-        send_message(chat_id, weather)
+        val = valorant()
+        send_message(chat_id, val)
     return {"ok": True}
