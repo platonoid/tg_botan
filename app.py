@@ -1,18 +1,23 @@
 from flask import Flask, request
+import os
+from dotenv import load_dotenv
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Dispatcher
 import logging
 import telegram
 
+load_dotenv()
 app = Flask(__name__)
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-updater = Updater(token='6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0', use_context=True)
+updater = Updater(token = os.getenv('TOKEN'), use_context=True)
 dispatcher = updater.dispatcher
+
 
 def start(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="Привет! Я бот. Как дела?")
+
 
 def reply(update, context):
     try:
