@@ -1,26 +1,42 @@
 from flask import Flask, request
-import requests
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Dispatcher
+import logging
+import telegram
 
 app = Flask(__name__)
 
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-def valorant():
-    return 'Привет'
+updater = Updater(token='6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0', use_context=True)
+dispatcher = updater.dispatcher
+
+def start(update, context):
+    context.bot.send_message(chat_id=update.message.chat_id, text="Привет! Я бот. Как дела?")
+
+def reply(update, context):
+    try:
+        text = update.message.text
+        context.bot.send_message(chat_id=update.message.chat_id, text=text)
+    except Exception as e:
+        context.bot.send_message(chat_id=update.message.chat_id, text='Ошибка: ' + str(e))
+
+start_handler = CommandHandler('start', start)
+reply_handler = MessageHandler(Filters.text & (~Filters.command), reply)
+dispatcher.add_handler(start_handler)
+dispatcher.add_handler(reply_handler)
 
 
-def send_message(chat_id, text):
-    method = "sendMessage"
-    token = "6145174608:AAE_RKJRKNY_t82sPknD1mglkQu5qpXqVKw"
-    url = f"https://api.telegram.org/bot{token}/{method}"
-    data = {"chat_id": chat_id, "text": text}
-    requests.post(url, data=data)
+@app.route('/', methods=['POST'])
+def webhook():
+    update = telegram.Update.de_json(request.get_json(force=True), updater.bot)
+    dispatcher.process_update(update)
+    return 'ok'
 
 
-@app.route("/", methods=["GET", "POST"])
-def receive_update():
-    if request.method == "POST":
-        print(request.json)
-        chat_id = request.json["message"]["chat"]["id"]
-        val = valorant()
-        send_message(chat_id, val)
-    return {"ok": True}
+if __name__ == '__main__':
+    updater.start_webhook(listen="0.0.0.0",
+                          port=8443,
+                          url_path='6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0')
+    updater.bot.setWebhook(url='https://your-bot-url.com/' + '6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0')
+    app.run()
