@@ -11,7 +11,7 @@ app = Flask(__name__)
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-addon = Application.builder().token('6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0').build()
+addon = Application.builder().token('TOKEN').build()
 
 
 async def start(update, context):
@@ -38,6 +38,6 @@ def webhook():
 
 
 if __name__ == '__main__':
-    addon = Application.builder().token("6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0").build()
+    addon = Application.builder().token("TOKEN").build()
     addon.add_handler(CommandHandler('start', start))
     addon.run_polling()
