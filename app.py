@@ -25,13 +25,22 @@ addon = Application.builder().token('6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorL
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text="I'm a Chamber, please talk to me!")
+    await context.bot.send_message(chat_id=update.effective_chat.id, text='''Привет, меня зовут Chamber, если ты еще совсем\
+                                                                          чайник в игре, то я тебе дам информацию\
+                                                                          которая может быть поможете тебе в будущем
+                                                                          Что я умею:
+                                                                          -/totalplayers: Я пишу количество игроков, играющих в Valorant
+                                                                          -/leaderboard: Я пишу тебе список игроков, их место, их рейтинг,\
+                                                                          а также кол-во их побед
+                                                                          -/name_of_characters: пишу список персонажей на текущей версии игры
+                                                                          -/map_pool: Пишу названия карт на текущей версии игры
+                                                                          ''')
 
 
 async def totalplayers(update: Update, context: ContextTypes.DEFAULT_TYPE):
     total = response.json()
     players = total["totalPlayers"]
-    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Hi, let me think, now we have {players} players')
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Привет, вот список игроков, с которыми ты точно сольешь рейтинг{players}')
 
 
 async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -44,7 +53,7 @@ async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
     for i in range(len(player)):
         board2.append(player[i]["numberOfWins"])
     for i in range(len(player)):
-        await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Интернет не анонимен {i + 1} : {board1[i]} - {board2[i]}')
+        await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Игрок который никогда не докасался до женщин:{i + 1} - номер в таблице лидеров, {board1[i]} - рейтинг {board2[i]} - победы')
 
 
 async def characters(update: Update, context: ContextTypes.DEFAULT_TYPE):
