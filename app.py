@@ -8,8 +8,8 @@ from telegram import Update
 import requests
 
 
-response = requests.get('https://eu.api.riotgames.com/val/ranked/v1/leaderboards/by-act/34093c29-4306-43de-452f-3f944bde22be?size=21&startIndex=0&api_key=RGAPI-d1d78cdc-c814-40c2-bc36-485fbbdeacab')
-response2 = requests.get('https://eu.api.riotgames.com/val/content/v1/contents?locale=ru-RU&api_key=RGAPI-d1d78cdc-c814-40c2-bc36-485fbbdeacab')
+response = requests.get('')
+response2 = requests.get('')
 
 version = response2.json()
 v = version["version"]
@@ -25,7 +25,7 @@ addon = Application.builder().token('6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorL
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text='''Привет, меня зовут Chamber, если ты еще совсем\
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'''Привет, меня зовут Chamber, если ты еще совсем\
                                                                           чайник в игре, то я тебе дам информацию\
                                                                           которая может быть поможете тебе в будущем
                                                                           Что я умею:
@@ -34,6 +34,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                                                           а также кол-во их побед
                                                                           -/name_of_characters: пишу список персонажей на текущей версии игры
                                                                           -/map_pool: Пишу названия карт на текущей версии игры
+                                                                          -/(название оружия): Отправляю все скины на оружие на момент {v}
                                                                           ''')
 
 
@@ -76,6 +77,191 @@ async def maps(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список карт на момент {v}: {name_of_maps}')
 
 
+async def odin(update: Update, context: ContextTypes.DEFAULT_TYPE):     #1
+    pulemet = []
+    city = response2.json()
+    big = city["chromas"]
+    for i in range(1, len(big)):
+        b = ''
+        if 'Odin ' in big[i]["name"]:
+            b = big[i]["name"]
+            pulemet.append(b)
+    ok = ', '.join(pulemet)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Odin на момент {v}: {ok}')
+
+
+async def vandal(update: Update, context: ContextTypes.DEFAULT_TYPE):   #2
+    vanal = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Vandal ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            vanal.append(b)
+    ok = ', '.join(vanal)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Vandal на момент {v}: {ok}')
+
+
+async def phantom(update: Update, context: ContextTypes.DEFAULT_TYPE):      #3
+    phantm = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Phantom ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            phantm.append(b)
+    ok = ', '.join(phantm[:54])
+    ok1 = ', '.join(phantm[55:])
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Phantom на момент {v}: {ok}')
+    await context.bot.send_message(chat_id=update.effective_chat.id,
+                                   text=f'Список скинов на Phantom на момент {v}: {ok1}')
+
+
+async def classic(update: Update, context: ContextTypes.DEFAULT_TYPE):      #4
+    classic = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Classic ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            classic.append(b)
+    ok = ', '.join(classic)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Classic на момент {v}: {ok}')
+
+
+async def sheriff(update: Update, context: ContextTypes.DEFAULT_TYPE):      #5
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Sheriff ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Sheriff на момент {v}: {ok}')
+
+
+async def ghost(update: Update, context: ContextTypes.DEFAULT_TYPE):        #6
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Ghost ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Ghost на момент {v}: {ok}')
+
+
+async def ares(update: Update, context: ContextTypes.DEFAULT_TYPE):     #7
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Ares ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Ares на момент {v}: {ok}')
+
+
+async def shorty(update: Update, context: ContextTypes.DEFAULT_TYPE):       #8
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Shorty ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Shorty на момент {v}: {ok}')
+
+
+async def frenzy(update: Update, context: ContextTypes.DEFAULT_TYPE):       #9
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Frenzy ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Frenzy на момент {v}: {ok}')
+
+
+async def bucky(update: Update, context: ContextTypes.DEFAULT_TYPE):        #10
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Bucky ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Bucky на момент {v}: {ok}')
+
+
+async def judge(update: Update, context: ContextTypes.DEFAULT_TYPE):        #11
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Judge ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Judge на момент {v}: {ok}')
+
+
+async def bulldog(update: Update, context: ContextTypes.DEFAULT_TYPE):      #12
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Bulldog ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Bulldog на момент {v}: {ok}')
+
+
+async def operator(update: Update, context: ContextTypes.DEFAULT_TYPE):     #13
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Operator ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Ну все задолбали покупаю Operator в {v}: {ok}')
+
+
+async def guardian(update: Update, context: ContextTypes.DEFAULT_TYPE):     #14
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Guardian ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Guardian на момент {v}: {ok}')
+
+
 def reply(update, context):
     try:
         text = update.message.text
@@ -98,6 +284,23 @@ if __name__ == '__main__':
     addon = Application.builder().token("6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0").build()
     addon.add_handler(CommandHandler('reply', reply))
     addon.add_handler(CommandHandler('start', start))
+    addon.add_handler(CommandHandler('Odin', odin))
+    addon.add_handler(CommandHandler('Operator', operator))
+    addon.add_handler(CommandHandler('Spectre', spectre))
+    addon.add_handler(CommandHandler('Stinger', stinger))
+    addon.add_handler(CommandHandler('Frenzy', frenzy))
+    addon.add_handler(CommandHandler('Bucky', bucky))
+    addon.add_handler(CommandHandler('Judge', judge))
+    addon.add_handler(CommandHandler('Marshal', marshal))
+    addon.add_handler(CommandHandler('Ares', ares))
+    addon.add_handler(CommandHandler('Vandal', vandal))
+    addon.add_handler(CommandHandler('Ghost', ghost))
+    addon.add_handler(CommandHandler('Guardian', guardian))
+    addon.add_handler(CommandHandler('Bulldog', bulldog))
+    addon.add_handler(CommandHandler('Classic', classic))
+    addon.add_handler(CommandHandler('Shorty', shorty))
+    addon.add_handler(CommandHandler('Phantom', phantom))
+    addon.add_handler(CommandHandler('Sheriff', sheriff))
     addon.add_handler(CommandHandler('totalplayers', totalplayers))
     addon.add_handler(CommandHandler('leaderboard', leaderboard))
     addon.add_handler(CommandHandler('name_of_characters', characters))
