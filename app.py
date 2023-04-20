@@ -260,8 +260,47 @@ async def guardian(update: Update, context: ContextTypes.DEFAULT_TYPE):     #14
             count.append(b)
     ok = ', '.join(count)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Guardian на момент {v}: {ok}')
+    
+
+async def marshal(update: Update, context: ContextTypes.DEFAULT_TYPE):      #15
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Marshal ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Marshal на момент {v}: {ok}')
 
 
+async def spectre(update: Update, context: ContextTypes.DEFAULT_TYPE):      #16
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Spectre ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Spectre на момент {v}: {ok}')
+
+
+async def stinger(update: Update, context: ContextTypes.DEFAULT_TYPE):      #17
+    count = []
+    puh = response2.json()
+    paf = puh["chromas"]
+    for i in range(1, len(paf)):
+        b = ''
+        if 'Stinger ' in paf[i]["name"]:
+            b = paf[i]["name"]
+            count.append(b)
+    ok = ', '.join(count)
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Stinger на момент {v}: {ok}')
+
+    
 def reply(update, context):
     try:
         text = update.message.text
