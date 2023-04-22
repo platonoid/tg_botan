@@ -34,8 +34,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                                                           а также кол-во их побед
                                                                           -/name_of_characters: пишу список персонажей на текущей версии игры
                                                                           -/map_pool: Пишу названия карт на текущей версии игры
-                                                                          -/(название оружия): Отправляю все скины на оружие на момент {v}
+                                                                          -/(название оружия): Отправляю все скины на оружие на момент {v}-
+                                                                          Вот Список: classic, shorty, ghost, frenzy, sheriff,
+                                                                          stinger, spectre, bucky, judge, bulldog, guardian, vandal,
+                                                                          phantom, marshal, operator, ares, odin
                                                                           ''')
+
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chamba.jpg')
 
 
 async def totalplayers(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -65,6 +70,27 @@ async def characters(update: Update, context: ContextTypes.DEFAULT_TYPE):
          board.append(ch[i]["name"])
     name_of_character = ', '.join(board)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список персонажей на момент {v}: {name_of_character}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/breach.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/brimsone.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/chamber.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/cypher.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/fade.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/gekko.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/harbor.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/jett.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/kayo.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/kj.png')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/neon.png')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/omen.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/phoenix.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/raze.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/reyna.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/sage.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/skye.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/viper.png')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/yoru.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/sova.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/astra.jpg')
 
 
 async def maps(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -260,7 +286,7 @@ async def guardian(update: Update, context: ContextTypes.DEFAULT_TYPE):     #14
             count.append(b)
     ok = ', '.join(count)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Guardian на момент {v}: {ok}')
-    
+
 
 async def marshal(update: Update, context: ContextTypes.DEFAULT_TYPE):      #15
     count = []
@@ -300,7 +326,7 @@ async def stinger(update: Update, context: ContextTypes.DEFAULT_TYPE):      #17
     ok = ', '.join(count)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список скинов на Stinger на момент {v}: {ok}')
 
-    
+
 def reply(update, context):
     try:
         text = update.message.text
