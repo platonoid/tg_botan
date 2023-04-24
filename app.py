@@ -8,8 +8,8 @@ from telegram import Update
 import requests
 
 
-response = requests.get('')
-response2 = requests.get('')
+response = requests.get('https://eu.api.riotgames.com/val/content/v1/contents?locale=ru-RU&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
+response2 = requests.get('https://eu.api.riotgames.com/val/ranked/v1/leaderboards/by-act/34093c29-4306-43de-452f-3f944bde22be?size=21&startIndex=0&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
 
 version = response2.json()
 v = version["version"]
