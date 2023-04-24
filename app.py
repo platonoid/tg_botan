@@ -1,15 +1,15 @@
 from flask import Flask, request
 import os
 from dotenv import load_dotenv
-from telegram.ext import CommandHandler, MessageHandler, filters, Application, CallbackContext, ContextTypes
+from telegram.ext import CommandHandler, Application, ContextTypes
 import logging
 import telegram
 from telegram import Update
 import requests
 
 
-response = requests.get('https://eu.api.riotgames.com/val/content/v1/contents?locale=ru-RU&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
-response2 = requests.get('https://eu.api.riotgames.com/val/ranked/v1/leaderboards/by-act/34093c29-4306-43de-452f-3f944bde22be?size=21&startIndex=0&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
+response2 = requests.get('https://eu.api.riotgames.com/val/content/v1/contents?locale=ru-RU&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
+response = requests.get('https://eu.api.riotgames.com/val/ranked/v1/leaderboards/by-act/34093c29-4306-43de-452f-3f944bde22be?size=21&startIndex=0&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
 
 version = response2.json()
 v = version["version"]
@@ -34,9 +34,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                                                           а также кол-во их побед
                                                                           -/name_of_characters: пишу список персонажей на текущей версии игры
                                                                           -/map_pool: Пишу названия карт на текущей версии игры
-                                                                          -/(название оружия): Отправляю все скины на оружие на момент {v}-
-                                                                          Вот Список: classic, shorty, ghost, frenzy, sheriff,
-                                                                          stinger, spectre, bucky, judge, bulldog, guardian, vandal,
+                                                                          -/(название оружия): Отправляю все скины на оружие на момент {v}-\
+                                                                          Вот Список: classic, shorty, ghost, frenzy, sheriff,\
+                                                                          stinger, spectre, bucky, judge, bulldog, guardian, vandal,\
                                                                           phantom, marshal, operator, ares, odin
                                                                           ''')
 
