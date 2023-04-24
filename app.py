@@ -23,6 +23,70 @@ logger = logging.getLogger(__name__)
 
 addon = Application.builder().token('6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0').build()
 
+astra = 'Астра (кодовое имя Звезда) — ганский агент-специалист из игры VALORANT.' \
+        ' Astra является одной из лучших специалистов' \
+        ' и подойдет любителям тактической игры. Несмотря на свою нестандартность,' \
+        ' данный агент пригодится любой хорошо сплоченной команде. '
+breach = 'Использующий бионические усиления швед Breach полагается на мощные направленные взрывы,' \
+         ' чтобы расчистить путь от агентов противника.' \
+         ' Разрушительная сила его умений позволяет получить решающее преимущество в любом бою.'
+brimstone = 'Brimstone (кодовое имя Сержант) — американский агент-специалист из игры VALORANT,' \
+            ' специализирующийся на поддержке союзников и нанесении урона врагам по всей карте. Brimstone уникален тем,' \
+            ' что использует мини-карту для развертывания некоторых своих способностей, делая его опасным,' \
+            ' даже если он не присутствует непосредственно в бою.'
+chamber = 'Одет с иголочки и вооружен до зубов. Chamber, французский конструктор оружия,' \
+          ' уничтожает врагов с поразительной точностью. ' \
+          'Уникальные умения этого нового стража позволяют эффективно защищаться,' \
+          ' нейтрализовать врагов издалека и продумывать любой план до мельчайших подробностей.'
+cypher = 'Торговец информацией из Марокко Cypher может самостоятельно создать целую информационную ' \
+         'сеть для отслеживания действий противника. Под неусыпным взором Cypher все тайное становится явным.'
+fade = 'Турчанка Fade, охотница за головами, связала свою жизнь с Кошмаром' \
+       ' и научилась читать врагов как открытые книги с помощью силы этого существа.' \
+       ' Впустив в свое сердце кромешную тьму, она получила способность раскрывать чужие страхи и сводить жертву с ума.'
+gekko = 'Gekko из Лос-Анджелеса заправляет дружной командой безбашенных существ. Его верные зверята смело бросаются' \
+        ' в драку, разнося врагов в пух и прах. А когда Gekko подбирает питомцев с поля боя,' \
+        ' можно перевести дух и повторить!'
+harbor = 'Агент Harbor с индийского побережья обрушивает бурю на поле боя, используя древнюю ' \
+         'технологию управления водой. Он повелевает бурлящими потоками и сокрушительными волнами,' \
+         ' чтобы защитить союзников и разгромить противников.'
+jett = 'Представляющая Южную Корею Jett быстра и неуловима и может позволить себе рисковать чаще других.' \
+       ' В любой стычке она заходит с флангов и быстро уничтожает растерявшегося противника.'
+kayo = 'KAY/O — боевая машина, созданная лишь для одной цели: истребить радиантов.' \
+       ' Его способность подавлять умения врага существенно ослабляет команду противника ' \
+       'и обеспечивает надежную защиту союзникам.'
+kj = 'Гений из Германии. Killjoy легко защищает территорию на поле боя с помощью своего арсенала изобретений.' \
+     ' Если противника не остановит урон от ее устройств,' \
+     ' то наносимые ими эффекты ослабления помогут Killjoy легко с ним справиться.'
+neon = 'Агент из Манилы с кодовым номером 19 может стать огромным помощником команде, чтобы та добилась успеха.' \
+       ' Способности Neon позволяют ей расчищать любые позиции и открывать выход на точку быстрее,' \
+       ' чем это сделает кто-либо другой. Благодаря эффекту неожиданности, ' \
+       'эта филиппинка принесет огромный вклад в победу. '
+omen = 'Призрак из прошлого Omen наносит удары из тени.' \
+       ' Он способен ослеплять врагов и незаметно перемещаться по полю боя,' \
+       ' вселяя страх в сердца противников, тщетно пытающихся предугадать, откуда он нападет вновь'
+phoenix = 'Phoenix — дуэлянт с мощной огненной атакой. Поэтому он часто выступает агентом,' \
+          ' который возглавляет главную атаку своей команды. Как и любой дуэлянт, Phoenix — боец,' \
+          ' который наносит прямой урон в разгар схватки.'
+raze = 'Raze — мастер взрывного дела из Бразилии, обладательница сильного характера и еще более мощных пушек.' \
+       ' Она способна легко справиться с засевшими в обороне противниками или зачистить небольшое помещение.' \
+       ' Громко и без лишних церемоний.'
+reyna = 'Выросшая в самом сердце Мексики Reyna способна одолеть любого в бою один на один,' \
+        ' и убийства придают ей сил. Ее мощь ограничена лишь мастерством и очень зависит от успехов в бою.'
+sage = 'Защитница Китая Sage обеспечивает безопасность команды в бою.' \
+       ' Благодаря возможности воскрешать союзников и сдерживать натиск ' \
+       'врага она создает оазис покоя на жутком поле боя.'
+skye = 'Австралийка Skye и ее звериная стая прокладывают путь по враждебной территории.' \
+       ' Ее создания затрудняют продвижение врага, а сама Skye может лечить союзников.' \
+       ' С ней команда будет в безопасности и станет сильнее, чем когда-либо.'
+sova = 'Рожденный в вечной мерзлоте российского Заполярья,' \
+       ' Sova выслеживает и уничтожает противников с холодной точностью и эффективностью.' \
+       ' Этот первоклассный разведчик, экипированный особым луком, найдет вас, где бы вы ни прятались.'
+viper = 'Химик из США Viper устанавливает контроль над полем боя с помощью источающих токсичный газ устройств' \
+        ' и ограничивает обзор противникам. А тех, кого ей не удастся отравить, она непременно перехитрит.'
+yoru = 'Уроженец Японии Yoru способен создавать разрывы в самой в реальности, чтобы незаметно пробираться на' \
+       ' вражескую территорию. Сила и хитрость позволяют ему заставать врагов врасплох — они даже не успеют' \
+       ' понять, откуда пришла смерть.'
+
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'''Привет, меня зовут Chamber, если ты еще совсем\
@@ -60,6 +124,111 @@ async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
         board2.append(player[i]["numberOfWins"])
     for i in range(len(player)):
         await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Игрок который никогда не докасался до женщин:{i + 1} - номер в таблице лидеров, {board1[i]} - рейтинг {board2[i]} - победы')
+
+
+async def astra1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{astra}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/astra.jpg')
+
+
+async def breach1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{breach}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/breach.jpg')
+
+
+async def brimstone1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{brimstone}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/brimsone.jpg')
+
+
+async def chamber1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{chamber}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/chamber.jpeg')
+
+
+async def cypher1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{cypher}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/cypher.jpg')
+
+
+async def fade1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{fade}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/fade.jpg')
+
+
+async def gekko1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{gekko}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/gekko.jpg')
+
+
+async def harbor1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{harbor}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/harbor.jpeg')
+
+
+async def jett1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{jett}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/jett.jpeg')
+
+
+async def kayo1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{kayo}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/kayo.jpg')
+
+
+async def kj1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{kj}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/kj.png')
+
+
+async def neon1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{neon}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/neon.png')
+
+
+async def omen1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{omen}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/omen.jpg')
+
+
+async def phoenix1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{phoenix}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/phoenix.jpg')
+
+
+async def raze1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{raze}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/raze.jpg')
+
+
+async def reyna1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{reyna}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/reyna.jpg')
+
+
+async def sage1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{sage}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/sage.jpg')
+
+
+async def skye1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{skye}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/skye.jpeg')
+
+
+async def sova1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{sova}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/sova.jpeg')
+
+
+async def viper1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{viper}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/viper.png')
+
+
+async def yoru1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{yoru}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/yoru.jpeg')
 
 
 async def characters(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -380,4 +549,25 @@ if __name__ == '__main__':
     addon.add_handler(CommandHandler('leaderboard', leaderboard))
     addon.add_handler(CommandHandler('name_of_characters', characters))
     addon.add_handler(CommandHandler('map_pool', maps))
+    addon.add_handler(CommandHandler('astra', astra1))
+    addon.add_handler(CommandHandler('breach', breach1))
+    addon.add_handler(CommandHandler('brimstone', brimstone1))
+    addon.add_handler(CommandHandler('chamber', chamber1))
+    addon.add_handler(CommandHandler('cypher', cypher1))
+    addon.add_handler(CommandHandler('fade', fade1))
+    addon.add_handler(CommandHandler('gekko', gekko1))
+    addon.add_handler(CommandHandler('harbor', harbor1))
+    addon.add_handler(CommandHandler('jett', jett1))
+    addon.add_handler(CommandHandler('kayo', kayo1))
+    addon.add_handler(CommandHandler('killjoy', kj1))
+    addon.add_handler(CommandHandler('neon', neon1))
+    addon.add_handler(CommandHandler('omen', omen1))
+    addon.add_handler(CommandHandler('phoenix', phoenix1))
+    addon.add_handler(CommandHandler('raze', raze1))
+    addon.add_handler(CommandHandler('reyna', reyna1))
+    addon.add_handler(CommandHandler('sage', sage1))
+    addon.add_handler(CommandHandler('skye', skye1))
+    addon.add_handler(CommandHandler('sova', sova1))
+    addon.add_handler(CommandHandler('viper', viper1))
+    addon.add_handler(CommandHandler('yoru', yoru1))
     addon.run_polling()
