@@ -46,7 +46,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def totalplayers(update: Update, context: ContextTypes.DEFAULT_TYPE):
     total = response.json()
     players = total["totalPlayers"]
-    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Привет, вот список игроков, с которыми ты точно сольешь рейтинг{players}')
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Привет, вот кол-во игроков с которыми ты сможешь слить рейтинг {players}')
 
 
 async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -101,6 +101,16 @@ async def maps(update: Update, context: ContextTypes.DEFAULT_TYPE):
         sp.append(map_pool[i]["name"])
     name_of_maps = ', '.join(sp)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Список карт на момент {v}: {name_of_maps}')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Ascent.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Split.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Fracture.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Bind.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Breeze.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Lotus.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Pearl.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Icebox.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/TheRange.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/Haven.jpeg')
 
 
 async def odin(update: Update, context: ContextTypes.DEFAULT_TYPE):     #1
