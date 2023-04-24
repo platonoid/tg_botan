@@ -129,106 +129,127 @@ async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def astra1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{astra}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/astra.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/stas.jpg')
 
 
 async def breach1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{breach}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/breach.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/ivan.jpg')
 
 
 async def brimstone1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{brimstone}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/brimsone.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/serega.jpeg')
 
 
 async def chamber1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{chamber}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/chamber.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/yura.jpg')
 
 
 async def cypher1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{cypher}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/cypher.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/yura.jpg')
 
 
 async def fade1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{fade}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/fade.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/ivan.jpg')
 
 
 async def gekko1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{gekko}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/gekko.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/eminem.jpg')
 
 
 async def harbor1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{harbor}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/harbor.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/platon.jpg')
 
 
 async def jett1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{jett}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/jett.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/rlevenz.jpg')
 
 
 async def kayo1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{kayo}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/kayo.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/buster.jpg')
 
 
 async def kj1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{kj}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/kj.png')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/nottihon.jpg')
 
 
 async def neon1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{neon}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/neon.png')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/platon.JPG')
 
 
 async def omen1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{omen}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/omen.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/nottihon.jpg')
 
 
 async def phoenix1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{phoenix}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/phoenix.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/andrey.jpg')
 
 
 async def raze1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{raze}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/raze.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/andrey.png')
 
 
 async def reyna1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{reyna}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/reyna.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/andrey.png')
 
 
 async def sage1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{sage}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/sage.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/angela.jpg')
 
 
 async def skye1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{skye}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/skye.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/angela.jpg')
 
 
 async def sova1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{sova}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/sova.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/shaman.jpg')
 
 
 async def viper1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{viper}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/viper.png')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/angela.jpg')
 
 
 async def yoru1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{yoru}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/yoru.jpeg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/egor.jpg')
 
 
 async def characters(update: Update, context: ContextTypes.DEFAULT_TYPE):
