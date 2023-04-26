@@ -102,6 +102,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                                                           Вот Список: classic, shorty, ghost, frenzy, sheriff,\
                                                                           stinger, spectre, bucky, judge, bulldog, guardian, vandal,\
                                                                           phantom, marshal, operator, ares, odin
+                                                                          -/(имя персонажа): Отправляю краткую биографию о персонаже\
+                                                                          и фотографию самого персонажа(И конечно же лучшего игрока на нем)
                                                                           ''')
 
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chamba.jpg')
@@ -201,7 +203,7 @@ async def neon1(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def omen1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f'{omen}')
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='data/omen.jpg')
-    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/nottihon.jpg')
+    await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chads/egor.jpg')
 
 
 async def phoenix1(update: Update, context: ContextTypes.DEFAULT_TYPE):
