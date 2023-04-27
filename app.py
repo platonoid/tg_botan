@@ -104,6 +104,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                                                           phantom, marshal, operator, ares, odin
                                                                           -/(имя персонажа): Отправляю краткую биографию о персонаже\
                                                                           и фотографию самого персонажа(И конечно же лучшего игрока на нем)
+                                                                          Не стоит забывать и о команде -/help которая поможет вам\
+                                                                          если вы забыли команды бота
                                                                           ''')
 
     await context.bot.send_photo(chat_id=update.effective_chat.id, photo='chamba.jpg')
