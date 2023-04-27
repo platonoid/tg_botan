@@ -13,7 +13,6 @@ version = response2.json()
 v = version["version"]
 lol = response.json()
 val = []
-load_dotenv()
 app = Flask(__name__)
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
