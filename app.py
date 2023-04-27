@@ -8,8 +8,8 @@ from telegram import Update
 import requests
 
 
-response2 = requests.get('https://eu.api.riotgames.com/val/content/v1/contents?locale=ru-RU&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
-response = requests.get('https://eu.api.riotgames.com/val/ranked/v1/leaderboards/by-act/34093c29-4306-43de-452f-3f944bde22be?size=21&startIndex=0&api_key=RGAPI-7e56727b-9d24-4f9a-8911-bd56ab4a742e')
+response2 = requests.get('https://eu.api.riotgames.com/val/content/v1/contents?locale=ru-RU&api_key=RGAPI-de32c88b-0a59-46a4-993e-8ca454e33631')
+response = requests.get('https://eu.api.riotgames.com/val/ranked/v1/leaderboards/by-act/2de5423b-4aad-02ad-8d9b-c0a931958861?size=21&startIndex=0&api_key=RGAPI-de32c88b-0a59-46a4-993e-8ca454e33631')
 
 version = response2.json()
 v = version["version"]
@@ -551,6 +551,7 @@ if __name__ == '__main__':
     addon = Application.builder().token("6084013080:AAGX8y5i-XAv514ZvUU5PzC45A8iZorLVW0").build()
     addon.add_handler(CommandHandler('reply', reply))
     addon.add_handler(CommandHandler('start', start))
+    addon.add_handler(CommandHandler('help', start))
     addon.add_handler(CommandHandler('Odin', odin))
     addon.add_handler(CommandHandler('Operator', operator))
     addon.add_handler(CommandHandler('Spectre', spectre))
